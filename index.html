@@ -23,6 +23,25 @@
   button { font: inherit; cursor: pointer; touch-action: manipulation; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
+  [data-client-copy] {
+    background: rgba(232, 161, 28, 0.22);
+    box-shadow: inset 0 -2px 0 0 #8C3A1F;
+    padding: 0 3px;
+  }
+  [data-client-legend] {
+    background: rgba(140, 58, 31, 0.18);
+    border-bottom: 1px dashed rgba(232, 161, 28, 0.45);
+    padding: 11px clamp(16px, 4vw, 40px);
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    color: #E8A11C;
+  }
+  [data-client-legend] span { color: #EDE9E2; font-weight: 500; }
+
   /* —— Mobile nav —— */
   [data-nav-toggle] {
     display: none;
@@ -163,7 +182,6 @@
     }
 
     [data-frame] { flex: 1 1 100% !important; min-height: 220px; }
-    [data-brandon-photo] { min-width: 0 !important; flex: 1 1 100% !important; }
 
     input, textarea, select, button[type="submit"] { font-size: 16px !important; }
   }
@@ -207,6 +225,13 @@
     <a href="#contact" data-mobile-quote>Free Quote</a>
   </div>
 
+  <div data-client-legend>
+    <strong>Highlighted lines — for Brandon to confirm.</strong>
+    <span> All copy, photos, and sections on this site are customizable.</span>
+  </div>
+
+  <div data-client-preview>
+
   <!-- HERO -->
   <header id="top" data-hero style="position:relative; overflow:hidden; min-height:clamp(600px,90vh,880px); display:flex; flex-direction:column; justify-content:flex-start;">
     <!-- oversized background claw -->
@@ -220,10 +245,10 @@
       <div style="max-width:min(760px,92%);">
         <div data-hero-eyebrow style="display:inline-flex; align-items:center; gap:9px; margin-bottom:22px;">
           <span style="width:34px; height:3px; background:#E8A11C; display:block; flex:0 0 auto;"></span>
-          <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">Junk Removal · Clean-Outs · Demolition</span>
+          <span data-client-copy style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">Junk Removal · Clean-Outs · Demolition</span>
         </div>
-        <h1 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.94; margin:0; font-size:clamp(40px,8.2vw,104px); color:#EDE9E2;">No Job's<br>Too Big.<br><span style="color:#E8A11C;">We Clear<br>The Clutter.</span></h1>
-        <p style="max-width:540px; margin:26px 0 0; font-size:clamp(15px,1.8vw,19px); line-height:1.55; color:#c3c7cc; font-weight:500;">Full house clean-outs, hot tub removal, and light &amp; heavy demolition — North Plainfield, NJ and surrounding areas.</p>
+        <h1 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.94; margin:0; font-size:clamp(40px,8.2vw,104px); color:#EDE9E2;"><span data-client-copy>No Job's<br>Too Big.</span><br><span data-client-copy style="color:#E8A11C;">We Clear<br>The Clutter.</span></h1>
+        <p data-client-copy style="max-width:540px; margin:26px 0 0; font-size:clamp(15px,1.8vw,19px); line-height:1.55; color:#c3c7cc; font-weight:500;">Full house clean-outs, hot tub removal, and light &amp; heavy demolition — North Plainfield, NJ and surrounding areas.</p>
         <div data-hero-ctas style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;">
           <a href="#contact" style="background:#E8A11C; color:#15171A; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(14px,1.6vw,17px); letter-spacing:0.02em; text-transform:uppercase; padding:16px 30px; transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-3px); box-shadow:0 12px 30px rgba(232,161,28,0.45);">Get a Free Quote</a>
           <a href="tel:+19739462606" style="background:transparent; color:#EDE9E2; border:2px solid #5E646B; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(14px,1.6vw,17px); letter-spacing:0.02em; text-transform:uppercase; padding:14px 28px; transition:transform .18s ease, border-color .18s ease, color .18s ease;" style-hover="transform:translateY(-3px); border-color:#E8A11C; color:#E8A11C;">Call (973) 946-2606</a>
@@ -278,19 +303,19 @@
       <div style="display:flex; flex-wrap:wrap; align-items:stretch;">
         <div data-trust style="flex:1 1 200px; display:flex; align-items:center; gap:12px; padding:20px 8px; border-right:1px solid #23262a;">
           <span style="width:9px; height:9px; background:#E8A11C; flex:0 0 auto; transform:rotate(45deg);"></span>
-          <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">Open 24/7</span>
+          <span data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">Open 24/7</span>
         </div>
         <div data-trust style="flex:1 1 200px; display:flex; align-items:center; gap:12px; padding:20px 8px; border-right:1px solid #23262a;">
           <span style="width:9px; height:9px; background:#E8A11C; flex:0 0 auto; transform:rotate(45deg);"></span>
-          <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">Military Discount</span>
+          <span data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">Military Discount</span>
         </div>
         <div data-trust style="flex:1 1 200px; display:flex; align-items:center; gap:12px; padding:20px 8px; border-right:1px solid #23262a;">
           <span style="width:9px; height:9px; background:#E8A11C; flex:0 0 auto; transform:rotate(45deg);"></span>
-          <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">Owner-Operated</span>
+          <span data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">Owner-Operated</span>
         </div>
         <div data-trust style="flex:1 1 200px; display:flex; align-items:center; gap:12px; padding:20px 8px;">
           <span style="width:9px; height:9px; background:#E8A11C; flex:0 0 auto; transform:rotate(45deg);"></span>
-          <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">North Plainfield, NJ</span>
+          <span data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">North Plainfield, NJ</span>
         </div>
       </div>
     </div>
@@ -314,8 +339,8 @@
   <section id="services" style="background:#15171A; padding:clamp(20px,4vw,40px) 0 clamp(56px,8vw,96px);">
     <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px);">
       <div data-reveal data-delay="0" style="margin-bottom:clamp(28px,4vw,48px); max-width:720px;">
-        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">What We Haul</span>
-        <h2 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.96; margin:14px 0 0; font-size:clamp(30px,5vw,60px); color:#EDE9E2;">If It's Gotta Go,<br>It's Gone.</h2>
+        <span data-client-copy style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">What We Haul</span>
+        <h2 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.96; margin:14px 0 0; font-size:clamp(30px,5vw,60px); color:#EDE9E2;">If It's Gotta Go,<br>It's Gone.</h2>
       </div>
 
       <div style="display:flex; flex-wrap:wrap; gap:14px;">
@@ -324,8 +349,8 @@
           <svg viewBox="0 0 260 90" style="position:absolute; right:-30px; bottom:-16px; width:220px; opacity:0.08;"><polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/><polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/><polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/></svg>
           <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8C3A1F;">Signature Job</span>
           <div style="position:relative;">
-            <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.01em; line-height:0.98; margin:0; font-size:clamp(30px,4.2vw,52px); color:#EDE9E2;">Hot Tub<br>Removal</h3>
-            <p style="margin:16px 0 0; font-size:clamp(15px,1.7vw,18px); line-height:1.5; color:#c3c7cc; font-weight:500; max-width:340px;">That backyard eyesore, drained and dragged out today — decking, wiring, and all.</p>
+            <h3 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.01em; line-height:0.98; margin:0; font-size:clamp(30px,4.2vw,52px); color:#EDE9E2;">Hot Tub<br>Removal</h3>
+            <p data-client-copy style="margin:16px 0 0; font-size:clamp(15px,1.7vw,18px); line-height:1.5; color:#c3c7cc; font-weight:500; max-width:340px;">That backyard eyesore, drained and dragged out today — decking, wiring, and all.</p>
           </div>
         </div>
         <!-- FEATURE: Demolition -->
@@ -333,95 +358,46 @@
           <svg viewBox="0 0 260 90" style="position:absolute; right:-30px; bottom:-16px; width:220px; opacity:0.08;"><polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/><polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/><polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/></svg>
           <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8C3A1F;">Signature Job</span>
           <div style="position:relative;">
-            <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.01em; line-height:0.98; margin:0; font-size:clamp(30px,4.2vw,52px); color:#EDE9E2;">Light &amp; Heavy<br>Demolition</h3>
-            <p style="margin:16px 0 0; font-size:clamp(15px,1.7vw,18px); line-height:1.5; color:#c3c7cc; font-weight:500; max-width:360px;">Interior tear-outs to full structures. If it needs to come down, we bring it down.</p>
+            <h3 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.01em; line-height:0.98; margin:0; font-size:clamp(30px,4.2vw,52px); color:#EDE9E2;">Light &amp; Heavy<br>Demolition</h3>
+            <p data-client-copy style="margin:16px 0 0; font-size:clamp(15px,1.7vw,18px); line-height:1.5; color:#c3c7cc; font-weight:500; max-width:360px;">Interior tear-outs to full structures. If it needs to come down, we bring it down.</p>
           </div>
         </div>
 
         <!-- SMALL TILES -->
         <div data-reveal data-delay="40" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Full House<br>Clean-Outs</h3>
-          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Whole houses emptied, top to bottom.</p>
+          <h3 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Full House<br>Clean-Outs</h3>
+          <p data-client-copy style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Whole houses emptied, top to bottom.</p>
         </div>
         <div data-reveal data-delay="100" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Property<br>Clean-Outs</h3>
-          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Estates, foreclosures, and heavy cleanups.</p>
+          <h3 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Property<br>Clean-Outs</h3>
+          <p data-client-copy style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Estates, foreclosures, and heavy cleanups.</p>
         </div>
         <div data-reveal data-delay="160" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Junk &amp; Furniture<br>Pickup</h3>
-          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">One couch or a whole truckload.</p>
+          <h3 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Junk &amp; Furniture<br>Pickup</h3>
+          <p data-client-copy style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">One couch or a whole truckload.</p>
         </div>
         <div data-reveal data-delay="40" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Landscaping<br>Waste</h3>
-          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Brush, dirt, and yard debris cleared.</p>
+          <h3 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Landscaping<br>Waste</h3>
+          <p data-client-copy style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Brush, dirt, and yard debris cleared.</p>
         </div>
         <div data-reveal data-delay="100" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Electronic<br>Disposal</h3>
-          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">TVs, monitors, and e-waste hauled right.</p>
+          <h3 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Electronic<br>Disposal</h3>
+          <p data-client-copy style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">TVs, monitors, and e-waste hauled right.</p>
         </div>
         <div data-reveal data-delay="160" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
-          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Donation<br>Pickup</h3>
-          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Still good? We'll get it donated.</p>
+          <h3 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Donation<br>Pickup</h3>
+          <p data-client-copy style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Still good? We'll get it donated.</p>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- DIVIDER -->
-  <div style="background:#15171A; padding:clamp(30px,5vw,52px) 0; overflow:hidden; position:relative;">
-    <div style="position:absolute; left:0; right:0; top:50%; height:1px; background:#2a2d31;"></div>
-    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); position:relative; display:flex; justify-content:flex-end;">
-      <div data-claw-slashes style="width:190px;">
-        <svg width="190" height="60" viewBox="0 0 260 90" style="display:block;">
-          <polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/>
-          <polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/>
-          <polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/>
-        </svg>
-      </div>
-    </div>
-  </div>
-
-  <!-- MEET BRANDON -->
-  <section style="background:#EDE9E2; color:#15171A; padding:clamp(48px,7vw,96px) 0;">
-    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); display:flex; flex-wrap:wrap; gap:clamp(28px,4vw,56px); align-items:center;">
-      <div data-reveal data-delay="0" style="flex:1 1 440px;">
-        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#8C3A1F;">The Difference</span>
-        <h2 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.94; margin:14px 0 0; font-size:clamp(34px,5.4vw,68px); color:#15171A;">Meet<br>Brandon.</h2>
-        <div style="margin-top:24px; max-width:520px; font-size:clamp(15px,1.7vw,18px); line-height:1.6; color:#2c2f33; font-weight:500;">
-          <p style="margin:0 0 16px;">When you call Dumpsterdawgz, you get Brandon — not a call center, not a dispatcher three states away. One guy who shows up, gives it to you straight, and gets it done.</p>
-          <p style="margin:0 0 16px;"><span data-flag style="background:rgba(232,161,28,0.28); border-bottom:2px dashed #8C3A1F; padding:0 2px;">Brandon's been clearing out homes and tearing down what needs to go across North Plainfield for years,</span> and he runs every job himself — from the first quote to the last load.</p>
-          <p style="margin:0;"><span data-flag style="background:rgba(232,161,28,0.28); border-bottom:2px dashed #8C3A1F; padding:0 2px;">Professional, reliable, and easy to deal with</span> — that's what folks say, and that's the whole point of doing it this way.</p>
-        </div>
-        <p style="margin:18px 0 0; font-size:12px; letter-spacing:0.02em; color:#8C3A1F; font-weight:600; display:inline-flex; align-items:center; gap:8px;"><span style="width:8px;height:8px;background:#8C3A1F;transform:rotate(45deg);display:inline-block;"></span>Highlighted lines — for Brandon to confirm or personalize.</p>
-      </div>
-      <div data-brandon-photo data-reveal data-delay="120" style="flex:1 1 340px; min-width:280px;">
-        <div style="position:relative; aspect-ratio:4/5; background:#15171A; border:1px solid #cfcabf; overflow:hidden;">
-          <img src="./images/truck.jpg" alt="The Dumpsterdawgz truck on a residential jobsite" style="width:100%; height:100%; object-fit:cover; display:block;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DIVIDER -->
-  <div style="background:#15171A; padding:clamp(30px,5vw,52px) 0; overflow:hidden; position:relative;">
-    <div style="position:absolute; left:0; right:0; top:50%; height:1px; background:#2a2d31;"></div>
-    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); position:relative;">
-      <div data-claw-slashes style="width:190px;">
-        <svg width="190" height="60" viewBox="0 0 260 90" style="display:block;">
-          <polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/>
-          <polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/>
-          <polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/>
-        </svg>
-      </div>
-    </div>
-  </div>
 
   <!-- RECENT WORK -->
   <section style="background:#15171A; padding:clamp(20px,3vw,32px) 0 clamp(56px,8vw,96px);">
     <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px);">
       <div data-reveal data-delay="0" style="margin-bottom:clamp(24px,3vw,40px); max-width:720px;">
-        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">Recent Work</span>
-        <h2 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.96; margin:14px 0 0; font-size:clamp(30px,5vw,60px); color:#EDE9E2;">Before &amp; Hauled.</h2>
+        <span data-client-copy style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">Recent Work</span>
+        <h2 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.96; margin:14px 0 0; font-size:clamp(30px,5vw,60px); color:#EDE9E2;">Before &amp; Hauled.</h2>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:14px;">
         <div data-reveal data-delay="0" data-frame style="flex:2 1 440px; aspect-ratio:16/10;"></div>
@@ -438,14 +414,14 @@
     <svg viewBox="0 0 260 90" style="position:absolute; left:-4%; top:8%; width:min(560px,55vw); opacity:0.06; transform:rotate(3deg);"><polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/><polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/><polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/></svg>
     <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); position:relative; display:flex; flex-wrap:wrap; gap:clamp(32px,5vw,64px);">
       <div data-reveal data-delay="0" style="flex:1 1 400px;">
-        <h2 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.94; margin:0; font-size:clamp(34px,5.6vw,72px); color:#EDE9E2;">Get a Free<br>Quote — <span style="color:#E8A11C;">Open<br>24/7.</span></h2>
+        <h2 data-client-copy style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.94; margin:0; font-size:clamp(34px,5.6vw,72px); color:#EDE9E2;">Get a Free<br>Quote — <span style="color:#E8A11C;">Open<br>24/7.</span></h2>
         <div style="margin-top:30px; display:flex; flex-direction:column; gap:16px;">
           <a href="tel:+19739462606" style="display:flex; align-items:center; gap:14px; text-decoration:none;">
             <span style="width:11px; height:11px; background:#E8A11C; transform:rotate(45deg); flex:0 0 auto;"></span>
             <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(22px,3vw,34px); letter-spacing:-0.01em; color:#EDE9E2;">(973) 946-2606</span>
           </a>
-          <p style="margin:0; font-size:15px; line-height:1.6; color:#9aa0a7; font-weight:500;">North Plainfield, NJ and surrounding areas.<br>707 Anna Pl, North Plainfield, NJ 07063</p>
-          <p style="margin:6px 0 0; font-size:13px; letter-spacing:0.03em; color:#5E646B; font-weight:600; text-transform:uppercase;">Credit cards accepted · Military discount</p>
+          <p data-client-copy style="margin:0; font-size:15px; line-height:1.6; color:#9aa0a7; font-weight:500;">North Plainfield, NJ and surrounding areas.<br>707 Anna Pl, North Plainfield, NJ 07063</p>
+          <p data-client-copy style="margin:6px 0 0; font-size:13px; letter-spacing:0.03em; color:#5E646B; font-weight:600; text-transform:uppercase;">Credit cards accepted · Military discount</p>
         </div>
       </div>
       <div data-reveal data-delay="120" style="flex:1 1 380px;">
@@ -457,12 +433,14 @@
             <input type="text" placeholder="Address" style="font-family:'Archivo',sans-serif; font-size:15px; padding:14px; border:1px solid #c9c4ba; background:#fff; color:#15171A; outline:none;">
             <textarea placeholder="What needs to go?" rows="3" style="font-family:'Archivo',sans-serif; font-size:15px; padding:14px; border:1px solid #c9c4ba; background:#fff; color:#15171A; outline:none; resize:vertical;"></textarea>
             <button type="submit" style="background:#E8A11C; color:#15171A; border:none; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:16px; letter-spacing:0.02em; text-transform:uppercase; padding:16px; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-2px); box-shadow:0 10px 26px rgba(232,161,28,0.45);">Get a Free Quote</button>
-            <div data-form-msg style="display:none; font-size:13px; color:#8C3A1F; font-weight:600; text-align:center;">Thanks — this is a demo form. Real submissions will reach Brandon directly.</div>
+            <div data-form-msg style="display:none; font-size:13px; color:#8C3A1F; font-weight:600; text-align:center;">Thanks — this is a demo form. Real submissions will go live once Brandon approves the setup.</div>
           </div>
         </form>
       </div>
     </div>
   </section>
+
+  </div><!-- /data-client-preview -->
 
   <!-- FOOTER -->
   <footer style="background:#15171A; padding:clamp(44px,6vw,72px) 0 40px; border-top:1px solid #2a2d31;">
@@ -471,7 +449,7 @@
         <div style="display:flex; flex-direction:column; align-items:flex-start; gap:12px;">
           <img src="./images/logo.png" width="52" height="52" alt="Dumpsterdawgz logo" style="display:block; object-fit:contain;">
           <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; font-size:clamp(22px,3vw,30px); letter-spacing:-0.02em; color:#EDE9E2; text-transform:uppercase; line-height:1;">Dumpster<span style="color:#E8A11C;">dawgz</span></span>
-          <p style="margin:8px 0 0; font-size:13px; letter-spacing:0.02em; color:#5E646B; font-weight:600; text-transform:uppercase;">No job is too big.</p>
+          <p data-client-copy style="margin:8px 0 0; font-size:13px; letter-spacing:0.02em; color:#5E646B; font-weight:600; text-transform:uppercase;">No job is too big.</p>
         </div>
       </div>
       <div style="display:flex; flex-wrap:wrap; gap:clamp(32px,5vw,72px);">
