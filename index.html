@@ -3,6 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/images/logo.png" type="image/png" sizes="32x32">
+<link rel="shortcut icon" href="/images/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="/images/logo.png">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -11,6 +14,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="/images/logo.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/images/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; }
@@ -536,7 +541,7 @@ class Component extends DCLogic {
       let link = document.querySelector("link[rel='icon']");
       if (!link) { link = document.createElement('link'); link.rel = 'icon'; document.head.appendChild(link); }
       link.type = 'image/png';
-      link.href = './images/logo.png';
+      link.href = '/images/logo.png';
     } catch (e) {}
 
     // mobile nav
