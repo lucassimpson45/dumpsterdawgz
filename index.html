@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+  body { margin: 0; background: #15171A; color: #EDE9E2; font-family: 'Archivo', system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  a { color: #E8A11C; text-decoration: none; }
+  a:hover { color: #F2B84A; }
+  ::selection { background: #E8A11C; color: #15171A; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</helmet>
+
+<div style="width:100%; overflow-x:clip; background:#15171A;">
+
+  <!-- NAV -->
+  <nav style="position:sticky; top:0; z-index:50; background:rgba(21,23,26,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #2a2d31;">
+    <div style="max-width:1300px; margin:0 auto; padding:14px clamp(16px,4vw,40px); display:flex; align-items:center; gap:clamp(10px,3vw,32px);">
+      <a href="#top" style="display:flex; align-items:center; gap:11px; flex:0 0 auto;">
+        <img src="./images/logo.png" width="34" height="34" alt="Dumpsterdawgz logo" style="display:block; flex:0 0 auto; object-fit:contain;">
+        <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; font-size:clamp(15px,2.1vw,20px); letter-spacing:-0.02em; color:#EDE9E2; white-space:nowrap; text-transform:uppercase;">Dumpster<span style="color:#E8A11C;">dawgz</span></span>
+      </a>
+      <div style="flex:1 1 auto; display:flex; align-items:center; justify-content:flex-end; gap:clamp(10px,2.4vw,30px); min-width:0;">
+        <a href="#top" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#EDE9E2; white-space:nowrap;">Home</a>
+        <a href="#services" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#9aa0a7; white-space:nowrap;">Services</a>
+        <a href="#" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#9aa0a7; white-space:nowrap;">About</a>
+        <a href="#" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#9aa0a7; white-space:nowrap;">Gallery</a>
+        <a href="#contact" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#9aa0a7; white-space:nowrap;">Contact</a>
+      </div>
+      <a href="#contact" data-nav-cta style="flex:0 0 auto; background:#E8A11C; color:#15171A; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(11px,1.3vw,13px); letter-spacing:0.03em; text-transform:uppercase; padding:10px 16px; white-space:nowrap; transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-2px); box-shadow:0 8px 22px rgba(232,161,28,0.4);">Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" data-hero style="position:relative; overflow:hidden; min-height:clamp(600px,90vh,880px); display:flex; flex-direction:column; justify-content:flex-start;">
+    <!-- oversized background claw -->
+    <svg viewBox="0 0 260 90" preserveAspectRatio="xMidYMid meet" style="position:absolute; top:clamp(40px,8vh,120px); right:-6%; width:min(860px,78vw); height:auto; opacity:0.11; transform:rotate(-4deg); z-index:0; pointer-events:none;">
+      <polygon points="70,-30 108,-30 42,120 4,120" fill="#5E646B"/>
+      <polygon points="135,10 173,10 118,120 80,120" fill="#5E646B"/>
+      <polygon points="205,-10 243,-10 182,120 144,120" fill="#5E646B"/>
+    </svg>
+
+    <div style="position:relative; z-index:3; max-width:1300px; width:100%; margin:0 auto; padding:clamp(56px,11vh,120px) clamp(16px,4vw,40px) 0;">
+      <div style="max-width:min(760px,92%);">
+        <div style="display:inline-flex; align-items:center; gap:9px; margin-bottom:22px;">
+          <span style="width:34px; height:3px; background:#E8A11C; display:block;"></span>
+          <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">Junk Removal · Clean-Outs · Demolition</span>
+        </div>
+        <h1 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.94; margin:0; font-size:clamp(40px,8.2vw,104px); color:#EDE9E2;">No Job's<br>Too Big.<br><span style="color:#E8A11C;">We Clear<br>The Clutter.</span></h1>
+        <p style="max-width:540px; margin:26px 0 0; font-size:clamp(15px,1.8vw,19px); line-height:1.55; color:#c3c7cc; font-weight:500;">Full house clean-outs, hot tub removal, and light &amp; heavy demolition — North Plainfield, NJ and surrounding areas.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;">
+          <a href="#contact" style="background:#E8A11C; color:#15171A; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(14px,1.6vw,17px); letter-spacing:0.02em; text-transform:uppercase; padding:16px 30px; transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-3px); box-shadow:0 12px 30px rgba(232,161,28,0.45);">Get a Free Quote</a>
+          <a href="tel:+19739462606" style="background:transparent; color:#EDE9E2; border:2px solid #5E646B; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(14px,1.6vw,17px); letter-spacing:0.02em; text-transform:uppercase; padding:14px 28px; transition:transform .18s ease, border-color .18s ease, color .18s ease;" style-hover="transform:translateY(-3px); border-color:#E8A11C; color:#E8A11C;">Call (973) 946-2606</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLUTTER FIELD (clears on scroll) -->
+    <svg data-debris-field viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice" style="position:absolute; left:0; bottom:0; width:100%; height:min(52%,420px); z-index:2; pointer-events:none;">
+      <g data-debris data-dir="-1.3" data-speed="1.45" style="transform-origin:330px 372px;">
+        <circle cx="330" cy="376" r="48" fill="#26292d"/>
+        <circle cx="330" cy="376" r="23" fill="#3d4248"/>
+      </g>
+      <g data-debris data-dir="-1" data-speed="1" style="transform-origin:210px 360px;">
+        <rect x="60" y="332" width="300" height="82" rx="12" fill="#5E646B"/>
+        <rect x="58" y="300" width="42" height="114" rx="12" fill="#565c63"/>
+        <rect x="320" y="300" width="42" height="114" rx="12" fill="#565c63"/>
+        <rect x="92" y="300" width="240" height="52" rx="12" fill="#6b7178"/>
+      </g>
+      <g data-debris data-dir="-0.6" data-speed="1.25" style="transform-origin:545px 340px;">
+        <rect x="380" y="252" width="332" height="162" rx="28" fill="#484d53"/>
+        <rect x="380" y="252" width="332" height="30" rx="15" fill="#565c63"/>
+        <ellipse cx="546" cy="272" rx="150" ry="32" fill="#2f3338"/>
+      </g>
+      <g data-debris data-dir="0.5" data-speed="1.15" style="transform-origin:820px 300px;">
+        <rect x="758" y="198" width="122" height="216" rx="12" fill="#3a3e43"/>
+        <rect x="758" y="272" width="122" height="7" fill="#2a2d31"/>
+        <rect x="800" y="250" width="9" height="58" rx="4" fill="#5E646B"/>
+      </g>
+      <g data-debris data-dir="0.9" data-speed="0.95" style="transform-origin:995px 320px;">
+        <polygon points="905,414 1000,214 1088,236 993,414" fill="#5E646B"/>
+        <polygon points="932,352 1018,272" stroke="#4b5158" stroke-width="6" fill="none"/>
+        <polygon points="950,392 1036,312" stroke="#4b5158" stroke-width="6" fill="none"/>
+      </g>
+      <g data-debris data-dir="1" data-speed="1.28" style="transform-origin:1185px 355px;">
+        <rect x="1105" y="322" width="92" height="92" fill="#4a4f55"/>
+        <rect x="1173" y="322" width="7" height="92" fill="#3a3e43"/>
+        <rect x="1140" y="284" width="82" height="82" fill="#8C3A1F"/>
+        <rect x="1177" y="284" width="7" height="82" fill="#6f2e18"/>
+        <rect x="1205" y="332" width="72" height="82" fill="#565c63"/>
+      </g>
+      <g data-debris data-dir="1.25" data-speed="1.35" style="transform-origin:1345px 320px;">
+        <polygon points="1262,414 1292,228 1316,232 1286,414" fill="#5E646B"/>
+        <polygon points="1420,414 1338,248 1360,238 1442,404" fill="#565c63"/>
+      </g>
+    </svg>
+  </header>
+
+  <!-- TRUST STRIP -->
+  <div style="background:#0f1114; border-top:1px solid #2a2d31; border-bottom:1px solid #2a2d31; position:relative; z-index:4;">
+    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px);">
+      <div style="display:flex; flex-wrap:wrap; align-items:stretch;">
+        <div data-trust style="flex:1 1 200px; display:flex; align-items:center; gap:12px; padding:20px 8px; border-right:1px solid #23262a;">
+          <span style="width:9px; height:9px; background:#E8A11C; flex:0 0 auto; transform:rotate(45deg);"></span>
+          <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">Open 24/7</span>
+        </div>
+        <div data-trust style="flex:1 1 200px; display:flex; align-items:center; gap:12px; padding:20px 8px; border-right:1px solid #23262a;">
+          <span style="width:9px; height:9px; background:#E8A11C; flex:0 0 auto; transform:rotate(45deg);"></span>
+          <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">Military Discount</span>
+        </div>
+        <div data-trust style="flex:1 1 200px; display:flex; align-items:center; gap:12px; padding:20px 8px; border-right:1px solid #23262a;">
+          <span style="width:9px; height:9px; background:#E8A11C; flex:0 0 auto; transform:rotate(45deg);"></span>
+          <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">Owner-Operated</span>
+        </div>
+        <div data-trust style="flex:1 1 200px; display:flex; align-items:center; gap:12px; padding:20px 8px;">
+          <span style="width:9px; height:9px; background:#E8A11C; flex:0 0 auto; transform:rotate(45deg);"></span>
+          <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(13px,1.4vw,15px); letter-spacing:0.03em; text-transform:uppercase; color:#EDE9E2;">North Plainfield, NJ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div style="background:#15171A; padding:clamp(30px,5vw,52px) 0; overflow:hidden; position:relative;">
+    <div style="position:absolute; left:0; right:0; top:50%; height:1px; background:#2a2d31;"></div>
+    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); position:relative;">
+      <div data-claw-slashes style="width:190px;">
+        <svg width="190" height="60" viewBox="0 0 260 90" style="display:block;">
+          <polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/>
+          <polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/>
+          <polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services" style="background:#15171A; padding:clamp(20px,4vw,40px) 0 clamp(56px,8vw,96px);">
+    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px);">
+      <div data-reveal data-delay="0" style="margin-bottom:clamp(28px,4vw,48px); max-width:720px;">
+        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">What We Haul</span>
+        <h2 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.96; margin:14px 0 0; font-size:clamp(30px,5vw,60px); color:#EDE9E2;">If It's Gotta Go,<br>It's Gone.</h2>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; gap:14px;">
+        <!-- FEATURE: Hot Tub -->
+        <div data-reveal data-delay="0" style="flex:2 1 420px; min-height:300px; background:#1c1f23; border:1px solid #2a2d31; border-top:4px solid #E8A11C; padding:clamp(24px,3vw,38px); display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;">
+          <svg viewBox="0 0 260 90" style="position:absolute; right:-30px; bottom:-16px; width:220px; opacity:0.08;"><polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/><polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/><polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/></svg>
+          <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8C3A1F;">Signature Job</span>
+          <div style="position:relative;">
+            <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.01em; line-height:0.98; margin:0; font-size:clamp(30px,4.2vw,52px); color:#EDE9E2;">Hot Tub<br>Removal</h3>
+            <p style="margin:16px 0 0; font-size:clamp(15px,1.7vw,18px); line-height:1.5; color:#c3c7cc; font-weight:500; max-width:340px;">That backyard eyesore, drained and dragged out today — decking, wiring, and all.</p>
+          </div>
+        </div>
+        <!-- FEATURE: Demolition -->
+        <div data-reveal data-delay="80" style="flex:2 1 420px; min-height:300px; background:#1c1f23; border:1px solid #2a2d31; border-top:4px solid #E8A11C; padding:clamp(24px,3vw,38px); display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;">
+          <svg viewBox="0 0 260 90" style="position:absolute; right:-30px; bottom:-16px; width:220px; opacity:0.08;"><polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/><polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/><polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/></svg>
+          <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#8C3A1F;">Signature Job</span>
+          <div style="position:relative;">
+            <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.01em; line-height:0.98; margin:0; font-size:clamp(30px,4.2vw,52px); color:#EDE9E2;">Light &amp; Heavy<br>Demolition</h3>
+            <p style="margin:16px 0 0; font-size:clamp(15px,1.7vw,18px); line-height:1.5; color:#c3c7cc; font-weight:500; max-width:360px;">Interior tear-outs to full structures. If it needs to come down, we bring it down.</p>
+          </div>
+        </div>
+
+        <!-- SMALL TILES -->
+        <div data-reveal data-delay="40" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Full House<br>Clean-Outs</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Whole houses emptied, top to bottom.</p>
+        </div>
+        <div data-reveal data-delay="100" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Property<br>Clean-Outs</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Estates, foreclosures, and heavy cleanups.</p>
+        </div>
+        <div data-reveal data-delay="160" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Junk &amp; Furniture<br>Pickup</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">One couch or a whole truckload.</p>
+        </div>
+        <div data-reveal data-delay="40" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Landscaping<br>Waste</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Brush, dirt, and yard debris cleared.</p>
+        </div>
+        <div data-reveal data-delay="100" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Electronic<br>Disposal</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">TVs, monitors, and e-waste hauled right.</p>
+        </div>
+        <div data-reveal data-delay="160" style="flex:1 1 240px; min-height:150px; background:#191c20; border:1px solid #2a2d31; padding:22px; display:flex; flex-direction:column; justify-content:space-between;">
+          <h3 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.01em; margin:0; font-size:clamp(18px,2vw,23px); color:#EDE9E2;">Donation<br>Pickup</h3>
+          <p style="margin:12px 0 0; font-size:14px; line-height:1.45; color:#9aa0a7; font-weight:500;">Still good? We'll get it donated.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div style="background:#15171A; padding:clamp(30px,5vw,52px) 0; overflow:hidden; position:relative;">
+    <div style="position:absolute; left:0; right:0; top:50%; height:1px; background:#2a2d31;"></div>
+    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); position:relative; display:flex; justify-content:flex-end;">
+      <div data-claw-slashes style="width:190px;">
+        <svg width="190" height="60" viewBox="0 0 260 90" style="display:block;">
+          <polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/>
+          <polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/>
+          <polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- MEET BRANDON -->
+  <section style="background:#EDE9E2; color:#15171A; padding:clamp(48px,7vw,96px) 0;">
+    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); display:flex; flex-wrap:wrap; gap:clamp(28px,4vw,56px); align-items:center;">
+      <div data-reveal data-delay="0" style="flex:1 1 440px;">
+        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#8C3A1F;">The Difference</span>
+        <h2 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.94; margin:14px 0 0; font-size:clamp(34px,5.4vw,68px); color:#15171A;">Meet<br>Brandon.</h2>
+        <div style="margin-top:24px; max-width:520px; font-size:clamp(15px,1.7vw,18px); line-height:1.6; color:#2c2f33; font-weight:500;">
+          <p style="margin:0 0 16px;">When you call Dumpsterdawgz, you get Brandon — not a call center, not a dispatcher three states away. One guy who shows up, gives it to you straight, and gets it done.</p>
+          <p style="margin:0 0 16px;"><span data-flag style="background:rgba(232,161,28,0.28); border-bottom:2px dashed #8C3A1F; padding:0 2px;">Brandon's been clearing out homes and tearing down what needs to go across North Plainfield for years,</span> and he runs every job himself — from the first quote to the last load.</p>
+          <p style="margin:0;"><span data-flag style="background:rgba(232,161,28,0.28); border-bottom:2px dashed #8C3A1F; padding:0 2px;">Professional, reliable, and easy to deal with</span> — that's what folks say, and that's the whole point of doing it this way.</p>
+        </div>
+        <p style="margin:18px 0 0; font-size:12px; letter-spacing:0.02em; color:#8C3A1F; font-weight:600; display:inline-flex; align-items:center; gap:8px;"><span style="width:8px;height:8px;background:#8C3A1F;transform:rotate(45deg);display:inline-block;"></span>Highlighted lines — for Brandon to confirm or personalize.</p>
+      </div>
+      <div data-reveal data-delay="120" style="flex:1 1 340px; min-width:280px;">
+        <div style="position:relative; aspect-ratio:4/5; background:#15171A; border:1px solid #cfcabf; overflow:hidden;">
+          <img src="./images/truck.jpg" alt="The Dumpsterdawgz truck on a residential jobsite" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div style="background:#15171A; padding:clamp(30px,5vw,52px) 0; overflow:hidden; position:relative;">
+    <div style="position:absolute; left:0; right:0; top:50%; height:1px; background:#2a2d31;"></div>
+    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); position:relative;">
+      <div data-claw-slashes style="width:190px;">
+        <svg width="190" height="60" viewBox="0 0 260 90" style="display:block;">
+          <polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/>
+          <polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/>
+          <polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- RECENT WORK -->
+  <section style="background:#15171A; padding:clamp(20px,3vw,32px) 0 clamp(56px,8vw,96px);">
+    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px);">
+      <div data-reveal data-delay="0" style="margin-bottom:clamp(24px,3vw,40px); max-width:720px;">
+        <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">Recent Work</span>
+        <h2 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.96; margin:14px 0 0; font-size:clamp(30px,5vw,60px); color:#EDE9E2;">Before &amp; Hauled.</h2>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:14px;">
+        <div data-reveal data-delay="0" data-frame style="flex:2 1 440px; aspect-ratio:16/10;"></div>
+        <div data-reveal data-delay="80" data-frame style="flex:1 1 260px; aspect-ratio:16/10;"></div>
+        <div data-reveal data-delay="40" data-frame style="flex:1 1 260px; aspect-ratio:4/3;"></div>
+        <div data-reveal data-delay="120" data-frame style="flex:1 1 260px; aspect-ratio:4/3;"></div>
+        <div data-reveal data-delay="80" data-frame style="flex:2 1 440px; aspect-ratio:16/9;"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="contact" style="background:#0f1114; padding:clamp(52px,8vw,104px) 0; position:relative; overflow:hidden; border-top:1px solid #2a2d31;">
+    <svg viewBox="0 0 260 90" style="position:absolute; left:-4%; top:8%; width:min(560px,55vw); opacity:0.06; transform:rotate(3deg);"><polygon points="62,0 84,0 44,90 22,90" fill="#E8A11C"/><polygon points="126,28 148,28 112,90 90,90" fill="#E8A11C"/><polygon points="188,12 210,12 172,90 150,90" fill="#E8A11C"/></svg>
+    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); position:relative; display:flex; flex-wrap:wrap; gap:clamp(32px,5vw,64px);">
+      <div data-reveal data-delay="0" style="flex:1 1 400px;">
+        <h2 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.94; margin:0; font-size:clamp(34px,5.6vw,72px); color:#EDE9E2;">Get a Free<br>Quote — <span style="color:#E8A11C;">Open<br>24/7.</span></h2>
+        <div style="margin-top:30px; display:flex; flex-direction:column; gap:16px;">
+          <a href="tel:+19739462606" style="display:flex; align-items:center; gap:14px; text-decoration:none;">
+            <span style="width:11px; height:11px; background:#E8A11C; transform:rotate(45deg); flex:0 0 auto;"></span>
+            <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(22px,3vw,34px); letter-spacing:-0.01em; color:#EDE9E2;">(973) 946-2606</span>
+          </a>
+          <p style="margin:0; font-size:15px; line-height:1.6; color:#9aa0a7; font-weight:500;">North Plainfield, NJ and surrounding areas.<br>707 Anna Pl, North Plainfield, NJ 07063</p>
+          <p style="margin:6px 0 0; font-size:13px; letter-spacing:0.03em; color:#5E646B; font-weight:600; text-transform:uppercase;">Credit cards accepted · Military discount</p>
+        </div>
+      </div>
+      <div data-reveal data-delay="120" style="flex:1 1 380px;">
+        <form onSubmit="{{ onQuote }}" style="background:#EDE9E2; padding:clamp(24px,3vw,36px);">
+          <div style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:0.02em; color:#15171A; font-size:18px; margin-bottom:20px;">Tell us what's gotta go</div>
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <input type="text" placeholder="Name" style="font-family:'Archivo',sans-serif; font-size:15px; padding:14px; border:1px solid #c9c4ba; background:#fff; color:#15171A; outline:none;">
+            <input type="tel" placeholder="Phone" style="font-family:'Archivo',sans-serif; font-size:15px; padding:14px; border:1px solid #c9c4ba; background:#fff; color:#15171A; outline:none;">
+            <input type="text" placeholder="Address" style="font-family:'Archivo',sans-serif; font-size:15px; padding:14px; border:1px solid #c9c4ba; background:#fff; color:#15171A; outline:none;">
+            <textarea placeholder="What needs to go?" rows="3" style="font-family:'Archivo',sans-serif; font-size:15px; padding:14px; border:1px solid #c9c4ba; background:#fff; color:#15171A; outline:none; resize:vertical;"></textarea>
+            <button type="submit" style="background:#E8A11C; color:#15171A; border:none; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:16px; letter-spacing:0.02em; text-transform:uppercase; padding:16px; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-2px); box-shadow:0 10px 26px rgba(232,161,28,0.45);">Get a Free Quote</button>
+            <div data-form-msg style="display:none; font-size:13px; color:#8C3A1F; font-weight:600; text-align:center;">Thanks — this is a demo form. Real submissions will reach Brandon directly.</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#15171A; padding:clamp(44px,6vw,72px) 0 40px; border-top:1px solid #2a2d31;">
+    <div style="max-width:1300px; margin:0 auto; padding:0 clamp(16px,4vw,40px); display:flex; flex-wrap:wrap; gap:36px; justify-content:space-between;">
+      <div style="flex:0 1 auto;">
+        <div style="display:flex; flex-direction:column; align-items:flex-start; gap:12px;">
+          <img src="./images/logo.png" width="52" height="52" alt="Dumpsterdawgz logo" style="display:block; object-fit:contain;">
+          <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; font-size:clamp(22px,3vw,30px); letter-spacing:-0.02em; color:#EDE9E2; text-transform:uppercase; line-height:1;">Dumpster<span style="color:#E8A11C;">dawgz</span></span>
+          <p style="margin:8px 0 0; font-size:13px; letter-spacing:0.02em; color:#5E646B; font-weight:600; text-transform:uppercase;">No job is too big.</p>
+        </div>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; gap:clamp(32px,5vw,72px);">
+        <div>
+          <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#5E646B; margin-bottom:14px;">Menu</div>
+          <div style="display:flex; flex-direction:column; gap:9px;">
+            <a href="#top" style="color:#c3c7cc; font-size:14px; font-weight:500;">Home</a>
+            <a href="#services" style="color:#c3c7cc; font-size:14px; font-weight:500;">Services</a>
+            <a href="#" style="color:#c3c7cc; font-size:14px; font-weight:500;">About</a>
+            <a href="#" style="color:#c3c7cc; font-size:14px; font-weight:500;">Gallery</a>
+            <a href="#contact" style="color:#c3c7cc; font-size:14px; font-weight:500;">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Archivo',sans-serif; font-weight:700; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:#5E646B; margin-bottom:14px;">Reach Us</div>
+          <div style="display:flex; flex-direction:column; gap:9px; font-size:14px; color:#c3c7cc; font-weight:500;">
+            <a href="tel:+19739462606" style="color:#E8A11C; font-weight:700;">(973) 946-2606</a>
+            <span>707 Anna Pl</span>
+            <span>North Plainfield, NJ 07063</span>
+            <span style="color:#E8A11C; font-weight:600;">Open 24 hours · 7 days</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1300px; margin:36px auto 0; padding:20px clamp(16px,4vw,40px) 0; border-top:1px solid #23262a; display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; font-size:12px; color:#5E646B; font-weight:500;">
+      <span>© 2026 Dumpsterdawgz · Owner-operated in North Plainfield, NJ</span>
+      <span>Credit cards accepted · Military discount</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showClutter&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Motion&quot; },
+  &quot;sweepSpeed&quot;: { &quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 1, &quot;min&quot;: 0.5, &quot;max&quot;: 2, &quot;step&quot;: 0.1, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;Motion&quot; },
+  &quot;reducedMotionPreview&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Motion&quot; }
+}">
+class Component extends DCLogic {
+  componentDidMount() {
+    // favicon
+    try {
+      let link = document.querySelector("link[rel='icon']");
+      if (!link) { link = document.createElement('link'); link.rel = 'icon'; document.head.appendChild(link); }
+      link.type = 'image/png';
+      link.href = './images/logo.png';
+    } catch (e) {}
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.props.reducedMotionPreview === true;
+    const field = document.querySelector('[data-debris-field]');
+    if (field && this.props.showClutter === false) field.style.display = 'none';
+    const reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+    const claws = Array.from(document.querySelectorAll('[data-claw-slashes]'));
+    const debris = Array.from(document.querySelectorAll('[data-debris]'));
+    const frames = Array.from(document.querySelectorAll('[data-frame]'));
+
+    const galleryPhotos = [
+      { src: './images/couch-removal.jpg', alt: 'Crew loading furniture during a full house clean-out' },
+      { src: './images/appliance-removal.jpg', alt: 'Refrigerator removal into the Dumpsterdawgz truck' },
+      { src: './images/demolition.jpg', alt: 'Interior demolition work on a residential property' },
+      { src: './images/crew-loading-truck.jpg', alt: 'Crew loading items into the Dumpsterdawgz truck' },
+      { src: './images/truck.jpg', alt: 'Dumpsterdawgz truck at a North Plainfield jobsite' }
+    ];
+    frames.forEach((f, i) => {
+      const photo = galleryPhotos[i];
+      if (!photo) return;
+      f.style.background = '#191c20';
+      f.style.border = '1px solid #2a2d31';
+      f.style.position = 'relative';
+      f.style.overflow = 'hidden';
+      f.innerHTML = "<img src='" + photo.src + "' alt='" + photo.alt + "' style='width:100%;height:100%;object-fit:cover;display:block;'>";
+    });
+
+    if (reduce) {
+      reveals.forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
+      claws.forEach(el => { el.style.transform = 'none'; });
+      debris.forEach(el => { el.style.opacity = 0.001; }); // already-cleared state
+      return;
+    }
+
+    // reveal setup
+    reveals.forEach(el => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(34px)';
+      el.style.transition = 'opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)';
+      el.style.willChange = 'opacity, transform';
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const el = e.target;
+          el.style.transitionDelay = (parseFloat(el.getAttribute('data-delay') || 0)) + 'ms';
+          el.style.opacity = 1;
+          el.style.transform = 'none';
+          io.unobserve(el);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+    reveals.forEach(el => io.observe(el));
+
+    // claw dividers wipe in
+    claws.forEach(el => {
+      el.style.transform = 'translateX(-118%)';
+      el.style.transition = 'transform .9s cubic-bezier(.2,.7,.2,1)';
+      el.style.willChange = 'transform';
+    });
+    const io2 = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.style.transform = 'translateX(0)'; io2.unobserve(e.target); }
+      });
+    }, { threshold: 0.5 });
+    claws.forEach(el => io2.observe(el));
+
+    // clear-the-clutter scroll sweep
+    this.hero = document.querySelector('[data-hero]');
+    this.debris = debris;
+    this.ticking = false;
+    this.update = () => {
+      if (!this.hero) return;
+      const h = this.hero.offsetHeight || 700;
+      const sweepMul = this.props.sweepSpeed || 1;
+      const p = Math.min(Math.max(window.scrollY / ((h * 0.72) / sweepMul), 0), 1);
+      const n = this.debris.length;
+      this.debris.forEach((el, i) => {
+        const dir = parseFloat(el.getAttribute('data-dir') || 1);
+        const speed = parseFloat(el.getAttribute('data-speed') || 1);
+        const stagger = (i / n) * 0.32;
+        const local = Math.min(Math.max((p - stagger) / (1 - stagger), 0), 1);
+        const e = local * local * (3 - 2 * local); // smoothstep
+        const tx = dir * e * speed * 150;
+        const ty = -e * speed * 120;
+        const rot = dir * e * 16;
+        el.style.transform = 'translate(' + tx + 'px,' + ty + 'px) rotate(' + rot + 'deg)';
+        el.style.opacity = 1 - e;
+      });
+    };
+    this.onScroll = () => {
+      if (!this.ticking) {
+        this.ticking = true;
+        requestAnimationFrame(() => { this.update(); this.ticking = false; });
+      }
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('resize', this.onScroll, { passive: true });
+    this.update();
+  }
+
+  componentWillUnmount() {
+    if (this.onScroll) {
+      window.removeEventListener('scroll', this.onScroll);
+      window.removeEventListener('resize', this.onScroll);
+    }
+  }
+
+  renderVals() {
+    return {
+      onQuote: (e) => {
+        e.preventDefault();
+        const m = document.querySelector('[data-form-msg]');
+        if (m) m.style.display = 'block';
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
