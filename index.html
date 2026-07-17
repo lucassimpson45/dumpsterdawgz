@@ -14,34 +14,198 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Expanded:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 84px; }
-  body { margin: 0; background: #15171A; color: #EDE9E2; font-family: 'Archivo', system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: #15171A; color: #EDE9E2; font-family: 'Archivo', system-ui, sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: clip; }
   a { color: #E8A11C; text-decoration: none; }
   a:hover { color: #F2B84A; }
   ::selection { background: #E8A11C; color: #15171A; }
+  img { max-width: 100%; height: auto; }
+  button { font: inherit; cursor: pointer; touch-action: manipulation; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* —— Mobile nav —— */
+  [data-nav-toggle] {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #3a3e43;
+    background: #1c1f23;
+    color: #EDE9E2;
+    flex: 0 0 auto;
+  }
+  [data-nav-toggle] svg { display: block; }
+  [data-nav-links] { display: flex; align-items: center; justify-content: flex-end; gap: clamp(10px, 2.4vw, 30px); min-width: 0; flex: 1 1 auto; }
+  [data-nav-links] a {
+    font-weight: 600;
+    font-size: clamp(11px, 1.4vw, 14px);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #9aa0a7;
+  }
+  [data-nav-links] a:first-child { color: #EDE9E2; }
+  [data-nav-cta-mobile] { display: none !important; }
+  [data-mobile-bar] { display: none; }
+
+  @media (max-width: 860px) {
+    html { scroll-padding-top: 72px; }
+    body.nav-open { overflow: hidden; }
+
+    [data-nav-inner] { gap: 12px !important; }
+    [data-nav-toggle] { display: flex; margin-left: auto; }
+    [data-nav-cta] { display: none !important; }
+
+    [data-nav-links] {
+      display: none;
+      position: fixed;
+      inset: 62px 0 0 0;
+      z-index: 49;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: 0;
+      padding: 12px 16px 24px;
+      background: rgba(15, 17, 20, 0.98);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid #2a2d31;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    [data-nav-links].is-open { display: flex; }
+    [data-nav-links] a {
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 12px 4px;
+      font-size: 15px !important;
+      letter-spacing: 0.06em !important;
+      border-bottom: 1px solid #23262a;
+      color: #EDE9E2 !important;
+    }
+    [data-nav-links] [data-nav-cta-mobile] {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      margin-top: 16px;
+      min-height: 52px;
+      padding: 14px 20px !important;
+      background: #E8A11C !important;
+      color: #15171A !important;
+      font-family: 'Archivo Expanded', 'Archivo', sans-serif;
+      font-weight: 800;
+      font-size: 15px !important;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      border: none;
+    }
+
+    [data-mobile-bar] {
+      display: flex;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 48;
+      gap: 10px;
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+      background: rgba(15, 17, 20, 0.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid #2a2d31;
+    }
+    [data-mobile-bar] a {
+      flex: 1 1 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      font-family: 'Archivo Expanded', 'Archivo', sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    [data-mobile-bar] [data-mobile-call] {
+      background: transparent;
+      color: #EDE9E2;
+      border: 2px solid #5E646B;
+    }
+    [data-mobile-bar] [data-mobile-quote] {
+      background: #E8A11C;
+      color: #15171A;
+      border: none;
+    }
+
+    body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+
+    [data-hero-eyebrow] { flex-wrap: wrap; gap: 8px !important; }
+    [data-hero-eyebrow] span:last-child {
+      font-size: 10px !important;
+      letter-spacing: 0.14em !important;
+      line-height: 1.45;
+    }
+    [data-hero-ctas] { flex-direction: column; }
+    [data-hero-ctas] a {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+    }
+
+    [data-trust] {
+      flex: 1 1 calc(50% - 1px) !important;
+      border-right: none !important;
+      padding: 16px 8px !important;
+    }
+
+    [data-frame] { flex: 1 1 100% !important; min-height: 220px; }
+    [data-brandon-photo] { min-width: 0 !important; flex: 1 1 100% !important; }
+
+    input, textarea, select, button[type="submit"] { font-size: 16px !important; }
+  }
+
+  @media (max-width: 480px) {
+    [data-trust] { flex: 1 1 100% !important; }
+    footer [data-footer-bottom] { flex-direction: column; align-items: flex-start; gap: 8px; }
+  }
 </style>
+<meta name="theme-color" content="#15171A">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </helmet>
 
 <div style="width:100%; overflow-x:clip; background:#15171A;">
 
   <!-- NAV -->
-  <nav style="position:sticky; top:0; z-index:50; background:rgba(21,23,26,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #2a2d31;">
-    <div style="max-width:1300px; margin:0 auto; padding:14px clamp(16px,4vw,40px); display:flex; align-items:center; gap:clamp(10px,3vw,32px);">
-      <a href="#top" style="display:flex; align-items:center; gap:11px; flex:0 0 auto;">
+  <nav data-site-nav style="position:sticky; top:0; z-index:50; background:rgba(21,23,26,0.92); backdrop-filter:blur(8px); border-bottom:1px solid #2a2d31;">
+    <div data-nav-inner style="max-width:1300px; margin:0 auto; padding:14px clamp(16px,4vw,40px); display:flex; align-items:center; gap:clamp(10px,3vw,32px);">
+      <a href="#top" style="display:flex; align-items:center; gap:11px; flex:0 0 auto; min-width:0;">
         <img src="./images/logo.png" width="34" height="34" alt="Dumpsterdawgz logo" style="display:block; flex:0 0 auto; object-fit:contain;">
         <span style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; font-size:clamp(15px,2.1vw,20px); letter-spacing:-0.02em; color:#EDE9E2; white-space:nowrap; text-transform:uppercase;">Dumpster<span style="color:#E8A11C;">dawgz</span></span>
       </a>
-      <div style="flex:1 1 auto; display:flex; align-items:center; justify-content:flex-end; gap:clamp(10px,2.4vw,30px); min-width:0;">
-        <a href="#top" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#EDE9E2; white-space:nowrap;">Home</a>
-        <a href="#services" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#9aa0a7; white-space:nowrap;">Services</a>
-        <a href="#" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#9aa0a7; white-space:nowrap;">About</a>
-        <a href="#" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#9aa0a7; white-space:nowrap;">Gallery</a>
-        <a href="#contact" style="font-weight:600; font-size:clamp(11px,1.4vw,14px); letter-spacing:0.04em; text-transform:uppercase; color:#9aa0a7; white-space:nowrap;">Contact</a>
+      <button type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav-menu" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <div id="site-nav-menu" data-nav-links>
+        <a href="#top">Home</a>
+        <a href="#services">Services</a>
+        <a href="#">About</a>
+        <a href="#">Gallery</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" data-nav-cta-mobile>Free Quote</a>
       </div>
       <a href="#contact" data-nav-cta style="flex:0 0 auto; background:#E8A11C; color:#15171A; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(11px,1.3vw,13px); letter-spacing:0.03em; text-transform:uppercase; padding:10px 16px; white-space:nowrap; transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-2px); box-shadow:0 8px 22px rgba(232,161,28,0.4);">Free Quote</a>
     </div>
   </nav>
+
+  <!-- MOBILE STICKY CTA BAR -->
+  <div data-mobile-bar aria-hidden="false">
+    <a href="tel:+19739462606" data-mobile-call>Call Now</a>
+    <a href="#contact" data-mobile-quote>Free Quote</a>
+  </div>
 
   <!-- HERO -->
   <header id="top" data-hero style="position:relative; overflow:hidden; min-height:clamp(600px,90vh,880px); display:flex; flex-direction:column; justify-content:flex-start;">
@@ -54,13 +218,13 @@
 
     <div style="position:relative; z-index:3; max-width:1300px; width:100%; margin:0 auto; padding:clamp(56px,11vh,120px) clamp(16px,4vw,40px) 0;">
       <div style="max-width:min(760px,92%);">
-        <div style="display:inline-flex; align-items:center; gap:9px; margin-bottom:22px;">
-          <span style="width:34px; height:3px; background:#E8A11C; display:block;"></span>
+        <div data-hero-eyebrow style="display:inline-flex; align-items:center; gap:9px; margin-bottom:22px;">
+          <span style="width:34px; height:3px; background:#E8A11C; display:block; flex:0 0 auto;"></span>
           <span style="font-family:'Archivo',sans-serif; font-weight:700; font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:#E8A11C;">Junk Removal · Clean-Outs · Demolition</span>
         </div>
         <h1 style="font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:900; text-transform:uppercase; letter-spacing:-0.02em; line-height:0.94; margin:0; font-size:clamp(40px,8.2vw,104px); color:#EDE9E2;">No Job's<br>Too Big.<br><span style="color:#E8A11C;">We Clear<br>The Clutter.</span></h1>
         <p style="max-width:540px; margin:26px 0 0; font-size:clamp(15px,1.8vw,19px); line-height:1.55; color:#c3c7cc; font-weight:500;">Full house clean-outs, hot tub removal, and light &amp; heavy demolition — North Plainfield, NJ and surrounding areas.</p>
-        <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;">
+        <div data-hero-ctas style="display:flex; flex-wrap:wrap; gap:14px; margin-top:34px;">
           <a href="#contact" style="background:#E8A11C; color:#15171A; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(14px,1.6vw,17px); letter-spacing:0.02em; text-transform:uppercase; padding:16px 30px; transition:transform .18s ease, box-shadow .18s ease;" style-hover="transform:translateY(-3px); box-shadow:0 12px 30px rgba(232,161,28,0.45);">Get a Free Quote</a>
           <a href="tel:+19739462606" style="background:transparent; color:#EDE9E2; border:2px solid #5E646B; font-family:'Archivo Expanded','Archivo',sans-serif; font-weight:800; font-size:clamp(14px,1.6vw,17px); letter-spacing:0.02em; text-transform:uppercase; padding:14px 28px; transition:transform .18s ease, border-color .18s ease, color .18s ease;" style-hover="transform:translateY(-3px); border-color:#E8A11C; color:#E8A11C;">Call (973) 946-2606</a>
         </div>
@@ -230,7 +394,7 @@
         </div>
         <p style="margin:18px 0 0; font-size:12px; letter-spacing:0.02em; color:#8C3A1F; font-weight:600; display:inline-flex; align-items:center; gap:8px;"><span style="width:8px;height:8px;background:#8C3A1F;transform:rotate(45deg);display:inline-block;"></span>Highlighted lines — for Brandon to confirm or personalize.</p>
       </div>
-      <div data-reveal data-delay="120" style="flex:1 1 340px; min-width:280px;">
+      <div data-brandon-photo data-reveal data-delay="120" style="flex:1 1 340px; min-width:280px;">
         <div style="position:relative; aspect-ratio:4/5; background:#15171A; border:1px solid #cfcabf; overflow:hidden;">
           <img src="./images/truck.jpg" alt="The Dumpsterdawgz truck on a residential jobsite" style="width:100%; height:100%; object-fit:cover; display:block;">
         </div>
@@ -332,7 +496,7 @@
         </div>
       </div>
     </div>
-    <div style="max-width:1300px; margin:36px auto 0; padding:20px clamp(16px,4vw,40px) 0; border-top:1px solid #23262a; display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; font-size:12px; color:#5E646B; font-weight:500;">
+    <div data-footer-bottom style="max-width:1300px; margin:36px auto 0; padding:20px clamp(16px,4vw,40px) 0; border-top:1px solid #23262a; display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between; font-size:12px; color:#5E646B; font-weight:500;">
       <span>© 2026 Dumpsterdawgz · Owner-operated in North Plainfield, NJ</span>
       <span>Credit cards accepted · Military discount</span>
     </div>
@@ -354,6 +518,29 @@ class Component extends DCLogic {
       link.type = 'image/png';
       link.href = './images/logo.png';
     } catch (e) {}
+
+    // mobile nav
+    const navToggle = document.querySelector('[data-nav-toggle]');
+    const navLinks = document.querySelector('[data-nav-links]');
+    const closeNav = () => {
+      if (!navLinks || !navToggle) return;
+      navLinks.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navToggle.setAttribute('aria-label', 'Open menu');
+      document.body.classList.remove('nav-open');
+    };
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('is-open');
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        document.body.classList.toggle('nav-open', open);
+      });
+      navLinks.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeNav));
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 860) closeNav();
+      });
+    }
 
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches || this.props.reducedMotionPreview === true;
     const field = document.querySelector('[data-debris-field]');
